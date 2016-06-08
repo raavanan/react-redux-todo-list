@@ -1,22 +1,14 @@
-import React, { PropTypes } from 'react';
-import { Link, IndexLink } from 'react-router';
+import React from 'react'
+import Footer from './Footer'
+import AddTodo from '../containers/AddTodo'
+import VisibleTodoList from '../containers/VisibleTodoList'
 
-const App = (props) => {
-  return (
-    <div>
-      <IndexLink to="/">Home</IndexLink>
-      {' | '}
-      <Link to="/fuel-savings">Example App</Link>
-      {' | '}
-      <Link to="/about">About</Link>
-      <br/>
-      {props.children}
-    </div>
-  );
-};
+const App = () => (
+  <div>
+    <AddTodo />
+    <VisibleTodoList />
+    <Footer />
+  </div>
+)
 
-App.propTypes = {
-  children: PropTypes.element
-};
-
-export default App;
+export default App
